@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <script>
+        var units = prompt("Enter consumed units:")
+        if (units <= 50) {
+            totalBill = normalCharge = (units * 0.50)
+            document.write("total bill amount is INR:" + totalBill + " ")
+
+        }
+        else if (units <= 150) {
+            totalBill = 50 * 0.50 + (units - 100) * 0.75
+            document.write("total bill amount is INR:" + totalBill + "  ")
+        }
+        else if (units <= 250) {
+            totalBill = 50 * 0.50 + 100 * 0.75 + (units - 250) * 0.75
+            document.write("total bill amount is INR:" + totalBill + "  ")
+        }
+        else {
+            normalCharge = 50 * 0.50 + 100 * 0.75 + 100 * 1.2 + (units - 250) * 1.5
+            document.write("normal charge is INR:" + normalCharge)
+            document.write("<br>");
+            surCharge = normalCharge * 0.20
+            document.write("surcharge is INR:" + surCharge)
+            document.write("<br>");
+            totalBill = normalCharge + surCharge
+            document.write("total bill amount is INR:" + totalBill)
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
